@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'back_check/styles2.css'%}">
+</head>
+<body>
+    <div class="container">
+        <h1>Background Check</h1>
+        <form action="{% url 'process_background_check' %}" method="post">
+            {% csrf_token %}
+            <section class="step" id="step1">
+                <div class="question-box">
+                    <label for="answer1">Q1. Enter your grade 9 marks in English</label>
+                    <input type="text" id="answer1" name="answer1" required>
+                </div>
+            </section>
+
+            <section class="step" id="step2">
+                <div class="question-box">
+                    <label for="answer2">Q2. Enter your grade 9 marks in Hindi/Other</label>
+                    <input type="text" id="answer2" name="answer2" required>
+                </div>
+            </section>
+
+            <section class="step" id="step3">
+                <div class="question-box">
+                    <label for="answer3">Q3. Enter your grade 9 marks in Math</label>
+                    <input type="text" id="answer3" name="answer3" required>
+                </div>
+            </section>
+
+            <section class="step" id="step4">
+                <div class="question-box">
+                    <label for="answer4">Q4. Enter your grade 9 marks in Science</label>
+                    <input type="text" id="answer4" name="answer4" required>
+                </div>
+            </section>
+
+            <section class="step" id="step5">
+                <div class="question-box">
+                    <label for="answer5">Q5. Enter your grade 9 marks in SST</label>
+                    <input type="text" id="answer5" name="answer5" required>
+                </div>
+            </section>
+
+            <section class="step" id="step6">
+                <div class="question-box">
+                    <label for="answer6">Q6. Enter your grade 10 marks in English</label>
+                    <input type="text" id="answer6" name="answer6" required>
+                </div>
+            </section>
+
+            <section class="step" id="step7">
+                <div class="question-box">
+                    <label for="answer7">Q7. Enter your grade 10 marks in Hindi/Other</label>
+                    <input type="text" id="answer7" name="answer7" required>
+                </div>
+            </section>
+
+            <section class="step" id="step8">
+                <div class="question-box">
+                    <label for="answer8">Q8. Enter your grade 10 marks in Math</label>
+                    <input type="text" id="answer8" name="answer8" required>
+                </div>
+            </section>
+
+            <section class="step" id="step9">
+                <div class="question-box">
+                    <label for="answer9">Q9. Enter your grade 10 marks in Science</label>
+                    <input type="text" id="answer9" name="answer9" required>
+                </div>
+            </section>
+
+            <section class="step" id="step10">
+                <div class="question-box">
+                    <label for="answer10">Q10. Enter your grade 10 marks in Science</label>
+                    <input type="text" id="answer10" name="answer10" required>
+                </div>
+            </section>
+
+            <section class="step" id="step11">
+                <div class="question-box">
+                    <label for="incomeOptions">Q11. What is your annual family income?</label>
+                    <select id="incomeOptions" name="incomeOptions">
+                        <option value="gt_8_lpa">> 8 LPA</option>
+                        <option value="lte_8_lpa"><= 8 LPA</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn" value="Submit" name="submit">
+            </section>
+        </form>
+    </div>
+    <div><img src="{% static 'back_check/1.png' %}"alt=margika ></div>
+
+    <script>
+        function showStep(step) {
+            const steps = document.querySelectorAll('.step');
+            steps.forEach((s) => s.style.display = 'none');
+            document.getElementById('step' + step).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

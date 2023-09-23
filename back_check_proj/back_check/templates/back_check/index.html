@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'back_check/styles.css'%}">
+    <title>Quiz Page</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="page-container">
+        <h1>Welcome to the</h1>
+        <h1>Background Check Test</h1>
+        <p>This test is designed to help us understand your background and experiences, which will enable us to provide you with the best possible career counseling services.</p>
+        <button id="start-button">Start Test</button>
+    </div>
+    <div><img src="{% static 'back_check/margika 1.png' %}" alt="margika"></div>
+
+    <script>
+        // Function to navigate to the second page (index2.html)
+        function navigateToSecondPage() {
+            // Redirect to the second page URL
+            window.location.href = '/back_check/index2.html/'; // Replace with the actual URL for index2.html
+        }
+
+        // Attach a click event listener to the "Start Test" button
+        document.getElementById('start-button').addEventListener('click', navigateToSecondPage);
+    </script>
+</body>
+</html>

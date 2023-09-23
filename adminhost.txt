@@ -1,0 +1,13 @@
+
+admin
+http://localhost:8000/admin/
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install django
+
+django-admin
+
+python manage.py runserver

@@ -1,0 +1,70 @@
+/* Reset default styles for the page */
+body, h1, button, p, label {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the page background with a gradient */
+body {
+    background: linear-gradient(to right, rgba(202, 202, 243, 0.8), rgba(162, 173, 217, 0.8), rgba(123, 146, 191, 0.8), rgba(82, 119, 166, 0.8), rgba(31, 93, 141, 0.8));
+    font-family: 'Roboto', sans-serif; /* Google Font: Roboto */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 90vh;
+}
+
+p {
+    font-size: medium;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #333; /* Darken the text color */
+}
+
+/* Style the container */
+.container {
+    text-align: left;
+    width: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5; /* Light gray background */
+    box-shadow: 5px 5px 10px rgba(0.2, 0.2, 0.2); /* Add a subtle shadow */
+    margin-right: 50px; /* Adjust the right margin */
+}
+
+h1 {
+    font-size: 3rem; /* Slightly smaller heading */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #101112; /* Blue heading color */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+    font-family: 'Montserrat', sans-serif; /* Google Font: Montserrat */
+}
+
+/* Style the Next and Previous Buttons */
+.btn {
+    padding: 10px 20px; /* Adjust the padding for buttons */
+    background-color: #000; /* Black button background */
+    color: #fff; /* White button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Add some spacing between buttons */
+}
+
+.btn:hover {
+    background-color: #333; /* Darker black on hover */
+}
+
+/* Add margin to the question boxes */
+.question-box {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+/* Optionally, you can add padding inside the question boxes */
+.question-box input,
+.question-box select {
+    padding: 5px; /* Adjust the padding as needed */
+}
